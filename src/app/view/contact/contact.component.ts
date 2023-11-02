@@ -22,7 +22,11 @@ export class ContactComponent implements OnInit {
   }
 
   openLinkedIn(): void {
-    window.open('https://www.linkedin.com/in/jonathanssm/', '_blank');
+    window.open('https://www.linkedin.com/in/jonathanssm', '_blank');
+  }
+
+  openGitHub(): void {
+    window.open('https://github.com/jonathanssm', '_blank');
   }
 
   test(): void {
@@ -32,7 +36,7 @@ export class ContactComponent implements OnInit {
   private initForm(): void {
     this.form = this.formBuilder.group({
       name: ['', [Validators.required, Validators.maxLength(50)]],
-      phone: ['', [Validators.required, Validators.pattern('[0-9]{13}')]],
+      phone: ['', [Validators.pattern('[0-9]{13}')]],
       email: ['', [Validators.required, Validators.email]],
       subject: [''],
       message: ['', [Validators.required]]

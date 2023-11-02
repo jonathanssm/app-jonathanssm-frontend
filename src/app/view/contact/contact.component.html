@@ -26,8 +26,12 @@
         </ng-template>
         <ng-template pTemplate="footer">
           <h5>ENCONTRE COMIGO</h5>
-          <p-button pTooltip="LinkdIn" tooltipPosition="bottom" (onClick)="openLinkedIn()"
-                    icon="pi pi-linkedin"></p-button>
+          <div class="grid row">
+            <app-button class="col-2" pTooltip="LinkdIn" tooltipPosition="bottom" (onClick)="openLinkedIn()"
+                        icon="pi pi-linkedin"></app-button>
+            <app-button class="col-2" pTooltip="GitHub" tooltipPosition="bottom" (onClick)="openGitHub()"
+                        icon="pi pi-github"></app-button>
+          </div>
         </ng-template>
       </p-card>
     </div>
@@ -44,7 +48,7 @@
               </div>
               <div class="col-12 xl:col-6">
                 <app-input-mask [formGroup]="form" controlName="phone" mask="+99 (99) 9-9999-9999" label="TELEFONE"
-                                [required]="true" msgError="Telefone é obrigatório"></app-input-mask>
+                                msgError="Telefone é obrigatório"></app-input-mask>
               </div>
             </div>
             <div class="grid row">
@@ -71,7 +75,8 @@
         <ng-template pTemplate="footer">
           <div class="grid row">
             <div class="col-12">
-              <p-button [style]="{'width': '100%'}" [rounded]="true" icon="pi pi-arrow-right" iconPos="right" label="ENVIAR MENSAGEM"></p-button>
+              <app-button [rounded]="true" icon="pi pi-arrow-right" iconPos="right"
+                          label="ENVIAR MENSAGEM"></app-button>
             </div>
           </div>
         </ng-template>
