@@ -1,0 +1,11 @@
+<span class="p-float-label">
+    <p-inputMask [style]="{'width': '100%'}" [id]="controlName" [mask]="mask" [unmask]="true"
+                 [formControl]="getControl()" [autoClear]="false" [showClear]="!readonly"
+                 [required]="required" [readonly]="readonly">
+    </p-inputMask>
+    <label [htmlFor]="controlName">{{required ? '*' : ''}} {{label}}</label>
+</span>
+<small class="p-error" *ngIf="getControl().invalid && getControl().dirty && !getControl().hasError('pattern')"
+       id="custom-error">{{msgError}}</small>
+<small class="p-error" *ngIf="getControl().invalid && getControl().dirty && getControl().hasError('pattern')"
+       id="required-error">Campo inválido</small>

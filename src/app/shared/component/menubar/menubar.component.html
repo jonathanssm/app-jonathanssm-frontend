@@ -1,0 +1,23 @@
+<div class="fadein mb-5">
+  <p-menubar [model]="items">
+    <ng-template pTemplate="end">
+      <div class="flex flex-wrap justify-content-center align-items-center">
+        <p-button class="mr-2" [rounded]="true" [outlined]="true" (onClick)="changeTheme()" (mouseenter)="changeIcon()"
+                  (mouseleave)="changeIcon()">
+          <ng-template pTemplate="icon">
+            <i [ngClass]="themeIcon"
+               [class]="(animateIcon ? 'flipright animation-duration-500' : 'flipleft animation-duration-500')"></i>
+          </ng-template>
+        </p-button>
+        <span>Jonathan S S Moraes</span>
+        <ng-container *ngIf="!showAvatarImage()">
+          <p-avatar icon="pi pi-user" styleClass="ml-2" size="xlarge" shape="circle"></p-avatar>
+        </ng-container>
+        <ng-container *ngIf="showAvatarImage()">
+          <p-avatar [image]="avatarImage" styleClass="ml-2"
+                    size="xlarge" shape="circle" (onImageError)="showAvatarIcon()"></p-avatar>
+        </ng-container>
+      </div>
+    </ng-template>
+  </p-menubar>
+</div>

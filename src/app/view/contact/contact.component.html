@@ -1,0 +1,81 @@
+<div class="fadein">
+  <div class="flex flex-wrap justify-content-center align-items-center">
+    <div class="col-12 xl:col-3">
+      <p-card>
+        <ng-template pTemplate="title">
+          <div class="flex justify-content-center">
+            <p-image [imageStyle]="{'box-shadow': '0 0 10px rgba(0, 0, 0, 0.9)'}" width="250" class="p-img-responsive"
+                     [src]="SRC_IMG" alt="Image"
+                     [preview]="true"></p-image>
+          </div>
+          <p>Jonathan S S Moraes</p>
+        </ng-template>
+        <ng-template pTemplate="subtitle">
+          <p>Desenvolvedor Java | Angular Pleno</p>
+        </ng-template>
+        <ng-template pTemplate="content">
+          <p>
+            Estou disponível para trabalhos freelance. Entre em contato comigo via e-mail ou através do meu número de
+            telefone.
+          </p>
+          <p>
+            Telefone: <b><a href="tel:+5531971384337">+55 (31) 9-7138-4337</a></b>
+            <br>
+            E-mail: <b><a href="mailto:jonathan.ssm.dev@outlook.com">jonathan.ssm.dev@outlook.com</a></b>
+          </p>
+        </ng-template>
+        <ng-template pTemplate="footer">
+          <h5>ENCONTRE COMIGO</h5>
+          <p-button pTooltip="LinkdIn" tooltipPosition="bottom" (onClick)="openLinkedIn()"
+                    icon="pi pi-linkedin"></p-button>
+        </ng-template>
+      </p-card>
+    </div>
+
+    <div class="col-12 xl:col-5">
+      <p-card>
+        <ng-template pTemplate="content">
+          <form [formGroup]="form">
+            <div class="grid row">
+              <div class="col-12 xl:col-6">
+                <app-input-mask [formGroup]="form" controlName="name" mask="99-999999" label="NOME" [required]="true"
+                                msgError="Nome é obrigatório">">
+                </app-input-mask>
+              </div>
+              <div class="col-12 xl:col-6">
+                <app-input-mask [formGroup]="form" controlName="phone" mask="+99 (99) 9-9999-9999" label="TELEFONE"
+                                [required]="true" msgError="Telefone é obrigatório"></app-input-mask>
+              </div>
+            </div>
+            <div class="grid row">
+              <div class="col-12">
+                <app-input-mask [formGroup]="form" controlName="email" mask="+99 (99) 9-9999-9999" label="E-MAIL"
+                                [required]="true" msgError="E-mail é obrigatório"></app-input-mask>
+              </div>
+            </div>
+            <div class="grid row">
+              <div class="col-12">
+                <app-input-mask [formGroup]="form" controlName="subject" mask="+99 (99) 9-9999-9999"
+                                label="ASSUNTO"></app-input-mask>
+              </div>
+            </div>
+            <div class="grid row">
+              <div class="col-12">
+                <app-input-mask [formGroup]="form" controlName="message" mask="+99 (99) 9-9999-9999"
+                                label="SUA MENSAGEM"
+                                [required]="true" msgError="Mensagem é obrigatória"></app-input-mask>
+              </div>
+            </div>
+          </form>
+        </ng-template>
+        <ng-template pTemplate="footer">
+          <div class="grid row">
+            <div class="col-12">
+              <p-button [style]="{'width': '100%'}" [rounded]="true" icon="pi pi-arrow-right" iconPos="right" label="ENVIAR MENSAGEM"></p-button>
+            </div>
+          </div>
+        </ng-template>
+      </p-card>
+    </div>
+  </div>
+</div>

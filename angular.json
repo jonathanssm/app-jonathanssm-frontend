@@ -25,7 +25,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              {
+                "input": "src/theme-md-light-indigo.css",
+                "bundleName": "md-light-indigo",
+                "inject": false
+              },
+              {
+                "input": "src/theme-md-dark-indigo.css",
+                "bundleName": "md-dark-indigo",
+                "inject": false
+              }
             ],
             "scripts": []
           },
@@ -94,5 +104,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "9746c410-df09-42b0-904d-585e55aca218"
   }
 }
