@@ -14,6 +14,7 @@ import {HomeComponent} from './view/home/home.component';
 import {AboutComponent} from "./view/about/about.component";
 import {ContactComponent} from "./view/contact/contact.component";
 import {InputMaskComponent} from "./shared/component/input-mask/input-mask.component";
+import {ButtonComponent} from "./shared/component/button/button.component";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {InputMaskComponent} from "./shared/component/input-mask/input-mask.compo
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    InputMaskComponent
+    InputMaskComponent,
+    ButtonComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
