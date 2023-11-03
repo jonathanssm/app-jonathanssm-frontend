@@ -19,4 +19,5 @@ export class InputMaskComponent {
   getControl(): FormControl {
     return this.formGroup.get(this.controlName) as FormControl;
   }
+
 }

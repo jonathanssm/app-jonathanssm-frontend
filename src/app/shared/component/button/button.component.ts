@@ -7,16 +7,25 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 })
 export class ButtonComponent {
 
-  @Input() rounded!: boolean;
+  @Input() rounded: boolean;
   @Input() icon?: string;
   @Input() iconPos?: any;
   @Input() label?: string;
   @Input() tooltip?: string;
-  @Input() tooltipPosition?: string = 'bottom'
+  @Input() tooltipPosition?: string;
+  @Input() disabled?: boolean;
 
-  @Output() onClick: EventEmitter<Event> = new EventEmitter<Event>();
+  @Output() onClick: EventEmitter<Event>;
 
-  emitEventClick(event: Event): void {
+  constructor() {
+    this.rounded = false;
+    this.tooltipPosition = 'bottom';
+    this.disabled = false;
+
+    this.onClick = new EventEmitter<Event>();
+  }
+
+  emitEventClick(event: any): void {
     this.onClick.emit(event);
   }
 
