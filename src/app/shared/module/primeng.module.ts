@@ -17,9 +17,11 @@ import {TooltipModule} from "primeng/tooltip";
 import {ImageModule} from "primeng/image";
 import {InputMaskModule} from "primeng/inputmask";
 import {ToastModule} from "primeng/toast";
+import {EditorModule} from "primeng/editor";
+import {DropdownModule} from "primeng/dropdown";
+import {KeyFilterModule} from "primeng/keyfilter";
 
 const MODULES: CommonModule[] = [
-  CommonModule,
   ButtonModule,
   AvatarModule,
   AvatarGroupModule,
@@ -36,7 +38,10 @@ const MODULES: CommonModule[] = [
   TooltipModule,
   ImageModule,
   InputMaskModule,
-  ToastModule
+  ToastModule,
+  EditorModule,
+  DropdownModule,
+  KeyFilterModule
 ]
 
 @NgModule({

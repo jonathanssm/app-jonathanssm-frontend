@@ -1,0 +1,11 @@
+<span class="p-float-label">
+    <p-dropdown [style]="{'width': '100%'}" [editable]="editable" [showClear]="editable && !readonly"
+                [options]="options"
+                [formControl]="getFormControl()" [filter]="filter" [filterBy]="optionLabel" [required]="required"
+                emptyFilterMessage="Nenhum resultado encontrado" emptyMessage="Nenhum resultado encontrado"
+                [resetFilterOnHide]="true"
+                [optionLabel]="optionLabel" [optionValue]="optionValue" [inputId]="controlName" [readonly]="readonly"
+                (onChange)="emitChangeEvent($event)"></p-dropdown>
+    <label [for]="controlName">{{required ? '*' : ''}} {{label}}</label>
+</span>
+<small class="p-error" *ngIf="getFormControl().invalid && getFormControl().dirty" id="custom-error">{{msgError}}</small>

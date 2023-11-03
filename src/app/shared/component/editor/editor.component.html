@@ -1,0 +1,5 @@
+<div class="card">
+  <p-editor [formControl]="getFormControl()" [style]="style"></p-editor>
+  <small class="p-error" *ngIf="getFormControl().invalid && getFormControl().dirty"
+         id="custom-error">{{msgError}}</small>
+</div>

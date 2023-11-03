@@ -35,9 +35,13 @@
                 "input": "src/theme-md-dark-indigo.css",
                 "bundleName": "md-dark-indigo",
                 "inject": false
-              }
+              },
+              "./node_modules/quill/dist/quill.core.css"
+            , "./node_modules/quill/dist/quill.snow.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/quill/dist/quill.js"
+            ]
           },
           "configurations": {
             "production": {
